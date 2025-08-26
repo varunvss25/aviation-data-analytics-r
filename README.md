@@ -60,55 +60,56 @@ The project is structured into three stages:
 ## 🚀 Getting Started
 
 ### 1) Install dependencies in R
-```r
+r
 install.packages(c("tidyverse","readr","ggplot2","janitor","scales","rmarkdown"))
 
-2) Add CSVs into data/
+### 2) Add CSVs into data/
 
-flights2022-h2.csv
+- flights2022-h2.csv
+- airlines.csv
+- airports.csv
 
-airlines.csv
+### 3) Run the pipeline (in order)
 
-airports.csv
+- R/01_load_clean.R
+- R/02_analysis.R
+- R/03_visuals.R
 
-3) Run the pipeline (in order)
-
-R/01_load_clean.R
-
-R/02_analysis.R
-
-R/03_visuals.R
-
-4) View the HTML report
+### 4) View the HTML report
 
 Open report/aviation_report.Rmd in RStudio
-
 Click Knit → outputs to docs/index.html (GitHub Pages)
 
+---
+
 ## 📂 Repository Structure
-aviation-data-analytics-r/
-├── R/
-│   ├── 01_load_clean.R
-│   ├── 02_analysis.R
-│   └── 03_visuals.R
-├── data/                  # input CSVs (ignored by git)
-├── outputs/
-│   ├── figures/           # generated ggplot2 images
-│   ├── route_summary.csv
-│   └── corr_summary.csv
-├── report/
-│   └── aviation_report.Rmd
-├── docs/                  # GitHub Pages site (index.html)
-├── README.md
-└── LICENSE
+
+aviation-data-analytics-r/\
+├── R/\
+│   ├── 01_load_clean.R\
+│   ├── 02_analysis.R\
+│   └── 03_visuals.R\
+├── data/                       # input CSVs (ignored by git)\
+├── outputs/\
+│   ├── figures/                # generated ggplot2 images\
+│   ├── route_summary.csv\
+│   └── corr_summary.csv\
+├── report/\
+│   └── aviation_report.Rmd\
+├── docs/                       # GitHub Pages site (index.html)\
+├── README.md\
+└── LICENSE\
+
+---
 
 ## 🛠 Dependencies
 
-R packages: tidyverse, readr, ggplot2, janitor, scales, rmarkdown
+- R packages: tidyverse, readr, ggplot2, janitor, scales, rmarkdown
+- Recommended environment: RStudio
 
-Recommended environment: RStudio
+---
 
 ## 📄 License
 
-This project is released under the MIT License. See LICENSE
- for details.
+This project is released under the MIT License. See LICENSE for details.
+```
