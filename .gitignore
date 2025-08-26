@@ -1,0 +1,22 @@
+# R/RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+
+# renv
+renv/library/
+renv/staging/
+renv.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs
+outputs/
+!outputs/figures/
+
+# Reports (generated)
+docs/index.html
